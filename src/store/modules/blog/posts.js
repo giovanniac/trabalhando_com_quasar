@@ -4,7 +4,7 @@ const posts = [
     subject: 'vue',
     link: 'link',
     description: 'some random description',
-    img: 'https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg?w=1390&crop=1',
+    img: 'https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg?w=1390&crop=1'
   },
   {
     title: 'Progamando com JS',
