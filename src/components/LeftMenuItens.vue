@@ -3,7 +3,7 @@
     clickable
     tag="a"
     target="_blank"
-    :href="link"
+    @click="redirectTo(pathToRedirect)"
   >
     <q-item-section
       v-if="icon"
@@ -35,7 +35,7 @@ export default {
       default: ''
     },
 
-    link: {
+    pathToRedirect: {
       type: String,
       default: '#'
     },
@@ -43,6 +43,11 @@ export default {
     icon: {
       type: String,
       default: ''
+    }
+  },
+  methods: {
+    redirectTo (pathToRedirect) {
+      if (this.$router.history.current.fullPath !== pathToRedirect) { this.$router.push({ path: pathToRedirect }) }
     }
   }
 }

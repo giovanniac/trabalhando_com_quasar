@@ -2,9 +2,12 @@
 const routes = [
   {
     path: '/',
+    redirect: '/blog',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
+      { path: 'blog', component: () => import('pages/Blog.vue') },
+      { path: 'about', component: () => import('pages/About.vue') },
+      { path: 'hobbies', component: () => import('pages/Hobbies.vue') }
     ]
   },
 

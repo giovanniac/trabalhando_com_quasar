@@ -1,6 +1,6 @@
 <template>
   <q-select
-    v-model="model.selector"
+    v-model="model[mountSelectorName]"
     v-bind="$attrs"
     :options="getSelectorOptions"
     option-value="subject"
@@ -13,7 +13,7 @@
       v-slot:prepend
       v-if="showPrependIcon"
     >
-      <q-icon :name="getIcon(model.selector)" />
+      <q-icon :name="getIcon(model[mountSelectorName])" />
     </template>
     <template
       v-slot:option="scope"
@@ -76,6 +76,9 @@ export default {
   computed: {
     getSelectorOptions () {
       return this.$store.getters[`${this.storeNamespace}/getSelectorOptions`](this.selectorName)
+    },
+    mountSelectorName () {
+      return this.selectorName + 'Selector'
     }
   }
 }

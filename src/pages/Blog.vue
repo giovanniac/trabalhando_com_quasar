@@ -43,7 +43,7 @@ export default {
   data () {
     return {
       lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec odio dolor.',
-      model: { selector: '' }
+      model: { subjectsSelector: '' }
     }
   },
   computed: {
@@ -51,7 +51,7 @@ export default {
       return this.$store.getters['Blog/getPosts']
     },
     filteredPosts () {
-      return this.model.selector !== '' ? this.getPosts.filter(post => post.subject === this.model.selector) : this.getPosts
+      return this.model.subjectsSelector !== '' ? this.getPosts.filter(post => post.subject === this.model.subjectsSelector) : this.getPosts
     }
   }
 }
