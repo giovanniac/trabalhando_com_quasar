@@ -4,7 +4,7 @@
       <q-card-section>
 
         <div class="row q-mb-md items-center justify-start">
-          <div class="col-sm-4">
+          <div class="col-12 col-md-4">
             <custom-selector
               label="Assuntos"
               :model="model"
@@ -16,15 +16,16 @@
           </div>
         </div>
 
-        <div class="row q-col-gutter-md">
+        <div class="row q-col-gutter-sm">
           <div
             v-for="item in filteredPosts"
-            class="col-sm-4"
             :key="item.title"
+            class="col-12 col-md-4"
           >
             <custom-card :item='item' />
           </div>
         </div>
+
       </q-card-section>
     </q-card>
   </q-page>
@@ -45,11 +46,6 @@ export default {
       model: { selector: '' }
     }
   },
-  methods: {
-    getIcon (subject) {
-      return this.$store.getters['Blog/getIcon'](subject)
-    }
-  },
   computed: {
     getPosts () {
       return this.$store.getters['Blog/getPosts']
@@ -60,3 +56,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.my-card {
+  width: 100%;
+}
+</style>

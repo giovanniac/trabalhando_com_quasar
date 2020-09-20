@@ -1,5 +1,5 @@
 <template>
-  <q-card>
+  <q-card v-bind="$attrs">
     <q-parallax
       :src="item.img"
       :height="200"
@@ -45,6 +45,3 @@ export default {
   }
 }
 </script>
-
-<style>
-</style>
