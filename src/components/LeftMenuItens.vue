@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'EssentialLink',
+  name: 'LeftMenuItens',
   props: {
     title: {
       type: String,

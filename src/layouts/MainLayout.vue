@@ -32,7 +32,7 @@
         >
           Essential Links
         </q-item-label>
-        <EssentialLink
+        <left-menu-itens
           v-for="link in essentialLinks"
           :key="link.title"
           v-bind="link"
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink.vue'
+import LeftMenuItens from 'components/LeftMenuItens.vue'
 
 const linksData = [
   {
@@ -96,7 +96,7 @@ const linksData = [
 
 export default {
   name: 'MainLayout',
-  components: { EssentialLink },
+  components: { LeftMenuItens },
   data () {
     return {
       leftDrawerOpen: false,
