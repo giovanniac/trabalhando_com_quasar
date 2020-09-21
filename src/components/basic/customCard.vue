@@ -9,8 +9,9 @@
       <div class="text-h6">{{ item.title }}</div>
       <div class="text-subtitle1">
         <q-icon
-          :name="getIcon(item.subject)"
-          style="color: blue; font-size: 1.5em"
+          :name="getIcon(item.subject).icon"
+          :color="getIcon(item.subject).color"
+          style="font-size: 1.5em"
         />
         {{ $t(item.subject) }}
       </div>

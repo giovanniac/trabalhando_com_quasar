@@ -13,7 +13,7 @@
       v-slot:prepend
       v-if="showPrependIcon"
     >
-      <q-icon :name="getIcon(model[mountSelectorName])" />
+      <q-icon :name="getIcon(model[mountSelectorName]).icon" />
     </template>
     <template
       v-slot:option="scope"
@@ -24,7 +24,10 @@
         v-on="scope.itemEvents"
       >
         <q-item-section avatar>
-          <q-icon :name="getIcon(scope.opt.subject)" />
+          <q-icon
+            :name="scope.opt.icon"
+            :color="scope.opt.color ? scope.opt.color : 'black'"
+          />
         </q-item-section>
         <q-item-section>
           <q-item-label
