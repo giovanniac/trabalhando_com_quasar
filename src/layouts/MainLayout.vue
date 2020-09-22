@@ -11,7 +11,7 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
 
-        <q-toolbar-title>
+        <q-toolbar-title class="playfair-font text-center">
           Giovanni's Portfolio
         </q-toolbar-title>
       </q-toolbar>
@@ -21,7 +21,7 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
-      content-class="bg-grey-1"
+      content-class="bg-grey-1 playfair-font"
     >
       <q-list>
         <left-menu-itens
@@ -33,7 +33,7 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <router-view class="dark-nord-background" />
     </q-page-container>
   </q-layout>
 </template>

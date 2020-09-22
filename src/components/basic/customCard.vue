@@ -1,17 +1,16 @@
 <template>
-  <q-card v-bind="$attrs">
+  <q-card v-bind="$attrs" class="playfair-font">
     <q-parallax
       :src="item.img"
       :height="200"
     />
 
     <q-card-section>
-      <div class="text-h6">{{ item.title }}</div>
-      <div class="text-subtitle1">
+      <div class="text-h6 text-bold">{{ item.title }}</div>
+      <div style="font-size: 1.3em">
         <q-icon
           :name="getIcon(item.subject).icon"
           :color="getIcon(item.subject).color"
-          style="font-size: 1.5em"
         />
         {{ $t(item.subject) }}
       </div>

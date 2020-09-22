@@ -2,7 +2,7 @@ import Posts from './posts'
 const state = () => ({
   icons: [
     { name: 'vue', icon: 'fab fa-vuejs', color: 'green' },
-    { name: 'js', icon: 'fab fa-js-square', color: 'yellow' },
+    { name: 'js', icon: 'fab fa-js-square', color: 'black' },
     { name: 'css', icon: 'fab fa-css3', color: 'red' },
     { name: 'html', icon: 'fab fa-html5', color: 'red' }
   ],
@@ -10,7 +10,7 @@ const state = () => ({
     subjects: [
       { subject: '', label: 'Todos', icon: 'fas fa-asterisk', color: 'black' },
       { subject: 'vue', label: 'VueJS', icon: 'fab fa-vuejs', color: 'green' },
-      { subject: 'js', label: 'Javascript', icon: 'fab fa-js-square', color: 'yellow' },
+      { subject: 'js', label: 'Javascript', icon: 'fab fa-js-square', color: 'black' },
       { subject: 'css', label: 'CSS3', icon: 'fab fa-css3', color: 'red' },
       { subject: 'html', label: 'HTML5', icon: 'fab fa-html5', color: 'red' }
     ]
