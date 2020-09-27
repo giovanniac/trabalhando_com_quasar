@@ -15,6 +15,10 @@ const state = () => ({
       { subject: 'html', label: 'HTML5', icon: 'fab fa-html5', color: 'red' }
     ]
   },
+  dialog: {
+    showDialog: false,
+    post: {}
+  },
   ...Posts
 })
 
@@ -27,13 +31,23 @@ const getters = {
   },
   getPosts: (state) => {
     return state.posts
+  },
+  getDialog: (state) => {
+    return state.dialog
   }
 }
 
 const mutations = {
+  setDialog (state, payload) {
+    state.dialog.showDialog = !state.dialog.showDialog
+    state.dialog.post = payload
+  }
 }
 
 const actions = {
+  setDialog: (context, payload) => {
+    context.commit('setDialog', payload)
+  }
 }
 
 export default {

@@ -28,17 +28,20 @@
 
       </q-card-section>
     </q-card>
+    <dialog-card />
   </q-page>
 </template>
 
 <script>
 import CustomSelector from '../components/basic/customSelector'
 import CustomCard from '../components/basic/customCard'
+import DialogCard from '../components/basic/dialogCard'
 export default {
   name: 'PageIndex',
   components: {
     CustomSelector,
-    CustomCard
+    CustomCard,
+    DialogCard
   },
   data () {
     return {

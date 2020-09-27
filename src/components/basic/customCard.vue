@@ -1,5 +1,8 @@
 <template>
-  <q-card v-bind="$attrs" class="playfair-font">
+  <q-card
+    v-bind="$attrs"
+    class="playfair-font"
+  >
     <q-parallax
       :src="item.img"
       :height="200"
@@ -24,6 +27,7 @@
       <q-btn
         label="Ler mais"
         color="primary"
+        @click="setDialog(item)"
       />
     </q-card-section>
   </q-card>
@@ -41,6 +45,9 @@ export default {
   methods: {
     getIcon (subject) {
       return this.$store.getters['Blog/getIcon'](subject)
+    },
+    setDialog (post) {
+      this.$store.dispatch('Blog/setDialog', post)
     }
   }
 }

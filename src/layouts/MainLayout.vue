@@ -11,7 +11,7 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
 
-        <q-toolbar-title class="playfair-font text-center">
+        <q-toolbar-title class="playfair-font">
           Giovanni's Portfolio
         </q-toolbar-title>
       </q-toolbar>
@@ -34,6 +34,7 @@
 
     <q-page-container>
       <router-view class="dark-nord-background" />
+
     </q-page-container>
   </q-layout>
 </template>
