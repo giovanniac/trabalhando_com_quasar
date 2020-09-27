@@ -6,6 +6,15 @@
         :height="200"
       />
       <q-card-section>
+        <q-btn
+          fab
+          color="primary"
+          icon="fas fa-times"
+          class="absolute card-round-icon-action"
+          style="top: 0; right: 12px; transform: translateY(-50%);"
+          @click="setDialog({})"
+        />
+
         <div class="text-h6 text-bold">{{ getDialog.post.title ? getDialog.post.title : '' }}</div>
         <div style="font-size: 1.3em">
           <q-icon
@@ -24,12 +33,15 @@
         </div>
       </q-card-section>
 
-      <q-card-actions align="right">
-        <q-btn
-          color="primary"
-          label="Fechar"
-          @click="setDialog({})"
-        />
+      <q-card-actions class="card-actions">
+        <div class="row justify-end items-end">
+          <q-btn
+            color="primary"
+            label="Fechar"
+            @click="setDialog({})"
+            class="col-2"
+          />
+        </div>
       </q-card-actions>
     </q-card>
   </q-dialog>
@@ -55,14 +67,26 @@ export default {
 </script>
 
 <style>
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
   .my-card {
     min-width: 100%;
   }
+  .card-actions {
+    display: none;
+  }
+  .card-round-icon-action {
+    display: block;
+  }
 }
-@media only screen and (min-width: 701px) {
+@media only screen and (min-width: 1000px) {
   .my-card {
-    min-width: 50%;
+    min-width: 60%;
+  }
+  .card-actions {
+    display: block;
+  }
+  .card-round-icon-action {
+    display: none;
   }
 }
 </style>
