@@ -3,7 +3,7 @@
     <q-card class="playfair-font my-card">
       <q-parallax
         :src="getDialog.post.img ? getDialog.post.img : ''"
-        :height="200"
+        :height="150"
       />
       <q-card-section>
         <q-btn
@@ -29,7 +29,9 @@
 
       <q-card-section>
         <div>
-          {{ getDialog.post.content ? getDialog.post.content : '' }}
+          <q-scroll-area style="height: 350px;">
+            {{ getDialog.post.content ? getDialog.post.content : '' }}
+          </q-scroll-area>
         </div>
       </q-card-section>
 
