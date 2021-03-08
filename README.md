@@ -2,6 +2,10 @@
 
 Projeto demonstrando o uso de componentes do quasar
 
+## Gitpages
+
+https://giovanniac.github.io/trabalhando_com_quasar/
+
 ## Install the dependencies
 ```bash
 npm install
